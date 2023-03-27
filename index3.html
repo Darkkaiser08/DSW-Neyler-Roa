@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diseño de sitios web</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f1f1f1;
+		}
+		
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		nav {
+			background-color: #ccc;
+			padding: 10px;
+			text-align: center;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+		
+		nav a {
+			display: inline-block;
+			padding: 10px;
+			text-decoration: none;
+			color: #333;
+			font-weight: bold;
+			border-radius: 5px;
+			margin: 0 10px;
+			transition: background-color 0.3s ease;
+		}
+		
+		nav a:hover {
+			background-color: #333;
+			color: #fff;
+		}
+		
+		footer {
+			background-color: #333;
+			padding: 20px;
+			text-align: center;
+			color: #fff;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+
+		#contenido {
+			margin-top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: stretch;
+		}
+
+		.seccion {
+			padding: 20px;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin: 10px;
+			background-color: #fff;
+			flex-basis: calc(25% - 20px);
+			min-height: 200px;
+			display: none;
+			position: relative;
+		}
+
+		.seccion h2 {
+			font-size: 1.2em;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+
+		.seccion p {
+			margin: 0;
+			line-height: 1.5;
+		}
+
+		#acerca-de {
+			margin-bottom: 0; 
+                
+		}
+	</style>
+</head>
+<body>
+	<div id="encabezado">
+		<header>
+			<h1>Diseño de sitios web, componente práctico</h1>
+		</header>
+	</div>
+
+	<div id="contenido">
+		<div id="seccion-navegacion">
+			<nav>
+				<a href="#" onclick="mostrarContenido('inicio')">Inicio</a>
+				<a href="#" onclick="mostrarContenido('tema')">Tema</a>
+				<a href="#" onclick="mostrarContenido('mockup')">Mockup</a>
+				<a href="#" onclick="mostrarContenido('acerca-de')">Acerca de</a>
+			</nav>
+		</div>
+
+		<div id="seccion-contenido">
+			<div class="seccion" id="inicio">
+            	<p>Los selectores CSS son una herramienta fundamental en el diseño de páginas web, ya que permiten seleccionar y aplicar.</p>
+            	<p>estilos a los elementos HTML de una página. Los selectores CSS se utilizan para especificar qué elementos de la página deben </p>
+            	<p>tener un estilo particular, como el color de fondo, el tamaño de la fuente, el espaciado entre líneas, entre otros. Los </p>
+            	<p>selectores CSS son muy versátiles y permiten aplicar estilos a diferentes tipos de elementos, como etiquetas HTML, clases, identificadores y atributos.</p>
+            </div>
+			<div class="seccion" id="tema">El tema es: Selectores CSS, corresponde al estudiante 1</div>
+			<div class="seccion" id="mockup">
+				<img id="imagen-mockup" src="https://i.imgur.com/f97yojo.png" alt="Imagen de mockup">
+			</div>
+			<div class="seccion" id="acerca-de">Página web creada para el curso "Diseño de páginas web" marzo de 2023</div>
+		</div>
+</div>
+
+<div id="pie-pagina">
+    <footer>
+        <p>&copy; 2023 Mi sitio web. Todos los derechos reservados.</p>
+        <p>Última actualización: 26 de marzo de 2023</p>
+</footer>
+
+<script>
+function mostrarContenido(id) {
+    // Ocultar todo el contenido
+    document.querySelectorAll('div[id^=""]').forEach(div => {
+        div.style.display = 'none';
+    });
+
+    // Mostrar el contenido correspondiente al ID del enlace seleccionado
+    var elemento = document.getElementById(id);
+    elemento.style.display = 'block';
+
+    // Mostrar la imagen correspondiente a "mockup"
+    // Mostrar la imagen correspondiente a "mockup"
+    if (id == 'mockup') {
+        var imagen = document.getElementById('imagen-mockup');
+        imagen.style.display = 'block';
+        }
+
+}
+
+</script>
+
+<!-- Agregar script para mostrar y ocultar contenido -->
+<script>
+    function mostrarContenido(id) {
+        // Ocultar todo el contenido
+        document.querySelectorAll('div[id^=""]').forEach(div => {
+            div.style.display = 'none';
+        });
+
+        // Mostrar el contenido correspondiente al ID del enlace seleccionado
+        document.getElementById(id).style.display = 'block';
+    }
+</script>
+</body>
+</html>
